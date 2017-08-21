@@ -1,10 +1,10 @@
 # Score Keep
 Basic Meteor app using real time collections via DDP.
 * You can add players and start incrementing their score.
-* changes are reflected in real time across all clients.
-* List is sorted in realtime by descending score.
-* Dynamic styling from 1st, 2nd and 3rd place.
-* Uses BEM SCSS structure for modular styling.
+* Changes are reflected in real time across all clients.
+* List is sorted in real time by descending score.
+* Dynamic styling for 1st, 2nd and 3rd place.
+* Uses B.E.M SCSS structure for modular styling.
 
 ## Screenshot and demo
 <div align="center">
@@ -12,7 +12,7 @@ Basic Meteor app using real time collections via DDP.
   <img src="https://raw.githubusercontent.com/luismasg/Meteor/Images/screencast.gif" width="350" height="582"/>   
 </div>
 
-## To run 
+## to run
 You must have meteor 1.5.1 or higher installed 
   
 * Clone repo 
