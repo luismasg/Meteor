@@ -5,14 +5,14 @@
 
 import React from 'react';
 import Player from './Player';
-
+import FlipMove from 'react-flip-move';
 export default class PlayerList extends React.Component {
 
     renderPlayers() {
         if (this.props.players && this.props.players.length === 0) {
             return (
                 <div className="item">
-                    <p >Please add a player to get started!</p>
+                    <p className="item__message">Please add a player to get started!</p>
                 </div>
             );
         } else {
@@ -23,7 +23,9 @@ export default class PlayerList extends React.Component {
     render() {
         return (
             <div>
-                {this.renderPlayers() || <p>Something is wrong. I didn't receive list of players.</p>}
+                <FlipMove duration={650} easing="ease-out" maintainContainerHeight={true}>
+                    {this.renderPlayers() || <p>Something is wrong. I didn't receive list of players.</p>}
+                </FlipMove>
             </div>
         );
     }
