@@ -1,16 +1,22 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import {Meteor} from "meteor/meteor";
-import {Tracker} from "meteor/tracker";
+import { Template } from 'meteor/templating';
+import { ReactiveVar } from 'meteor/reactive-var';
 
-import {Players, calculatePlayerPosition} from "./../imports/api/players";
-import App from './../imports/ui/App';
+import './main.html';
 
-Meteor.startup(() => {
-    Tracker.autorun(() => {
-        let players = Players.find({}, {sort: {score: -1}}).fetch();
-        let positionedPlayers = calculatePlayerPosition(players);
-        let title = "Score Keep";
-        ReactDOM.render(<App title={title} players={positionedPlayers}/>, document.getElementById('app'));
-    });
+Template.hello.onCreated(function helloOnCreated() {
+  // counter starts at 0
+  this.counter = new ReactiveVar(0);
+});
+
+Template.hello.helpers({
+  counter() {
+    return Template.instance().counter.get();
+  },
+});
+
+Template.hello.events({
+  'click button'(event, instance) {
+    // increment the counter when button is clicked
+    instance.counter.set(instance.counter.get() + 1);
+  },
 });
