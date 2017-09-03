@@ -1,12 +1,14 @@
 import React, {Component} from "react";
 import {Link} from "react-router";
-export default class Signup extends Component {
+
+export default class Login extends Component {
     render() {
         return (
             <div>
-                <h1>Join Short Lnk</h1>
-                <Link to="/">Already have an account ? </Link>
+                <h1>Login to Short Link</h1>
+                <Link to="/signup"> Have an Account? </Link>
             </div>
         );
     }
 }
+
