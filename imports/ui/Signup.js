@@ -11,9 +11,13 @@ export default class Signup extends Component {
     }
 
     onSubmit(e) {
+
         e.preventDefault();
         let email =this.refs.email.value.trim();
         let password=this.refs.password.value.trim();
+        if(password.length < 9){
+            return this.setState({error:'Password must be more than 8 characters long'});
+        }
         Accounts.createUser({email,password},(err)=>{
             if(err){
                 this.setState({error:err.reason});
