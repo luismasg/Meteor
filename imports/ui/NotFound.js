@@ -1,9 +1,2 @@
-import React, {Component} from "react";
-
-export default class NotFound extends Component {
-    render() {
-        return (
-            <p>NotFound comp hene</p>
-        );
-    }
-}
+import React from "react";
+export default ()=><p>NotFound comp (SFC)</p>;

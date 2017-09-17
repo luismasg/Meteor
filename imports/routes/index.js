@@ -2,7 +2,6 @@ import {Meteor} from "meteor/meteor";
 import React from "react";
 import {browserHistory, Router} from "react-router";
 
-
 import Signup from "../ui/Signup";
 import Link from "../ui/Link";
 import NotFound from "../ui/NotFound";
