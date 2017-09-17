@@ -14,7 +14,7 @@ export default class Link extends Component {
         const url =this.refs.url.value.trim();
         e.preventDefault();
         if(url){
-            Links.insert({url,userId:Meteor.userId() });
+            Meteor.call('links.insert',url);            
             this.refs.url.value='';
         }
 
@@ -23,9 +23,9 @@ export default class Link extends Component {
     render() {
         return (
             <div>
-                <p> Link comp here.</p>
+                <p> Your Links</p>
                 <button onClick={this.handleLogout.bind(this) }>Log out</button>
-<LinksList />
+                <LinksList />
                 <p>Add Link</p>
                 <form onSubmit={ this.onSubmit.bind(this) }>
                     <input type="text" ref="url" placeholder="URL"></input>
