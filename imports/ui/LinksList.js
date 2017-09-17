@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import { Links } from  '../api/links';
 import { Tracker } from 'meteor/tracker';
 import { Meteor } from 'meteor/meteor';
-
+import LinksListItem from './LinksListItem'
 
 export default class LinksList extends Component {
 
@@ -23,7 +23,13 @@ export default class LinksList extends Component {
         this.linksTracker.stop();
     }
     renderLinksListItems(){
-        return this.state.links.map(link=><p key={link._id}>{link.url}</p>);
+        return this.state.links.map((link)=>{
+            console.log(link);
+            const shortUrl=Meteor.absoluteUrl(link._id);
+            {/* return <LinksListItem key={link._id} shortUrl={shortUrl}  {...link} />; */}
+             return <LinksListItem key={link._id} shortUrl={shortUrl} link={link}/>;
+
+        });
     }
     render(){
         return (
