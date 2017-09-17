@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor'
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
-import '../startup/simple-schema-configuration';
+
 
 export const Links = new Mongo.Collection('links');
 if(Meteor.isServer){

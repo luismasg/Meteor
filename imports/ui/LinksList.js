@@ -20,7 +20,7 @@ export default class LinksList extends Component {
     }
     componentWillUnmount(){
         console.log('un mount');
-        Sthis.linksTracker.stop();
+        this.linksTracker.stop();
     }
     renderLinksListItems(){
         return this.state.links.map(link=><p key={link._id}>{link.url}</p>);
