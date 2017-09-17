@@ -7,6 +7,9 @@ Basic Meteor app using real time collections via DDP.
 * Uses B.E.M SCSS structure for modular styling.
 
 ## Screenshot and demo
+### Live <a href="http://score-keep-luisma.herokuapp.com/">Score keep demo</a> is live now!
+<br>
+
 <div align="center">
   <img src="https://raw.githubusercontent.com/luismasg/Meteor/Images/screenshot.JPG" width="350"/> 
   <img src="https://raw.githubusercontent.com/luismasg/Meteor/Images/screencast.gif" width="350" height="582"/>   
